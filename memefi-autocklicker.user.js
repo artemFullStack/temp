@@ -6,6 +6,7 @@
 // @grant        none
 // @icon         https://s2.coinmarketcap.com/static/img/coins/64x64/29373.png
 // @downloadURL  https://github.com/mudachyo/MemeFi-Coin/raw/main/memefi-autoclicker.user.js
+// @updateURL    https://github.com/artemFullStack/temp/raw/main/memefi-autocklicker.user.js
 // @homepage     https://github.com/mudachyo/MemeFi-Coin
 // ==/UserScript==
 
