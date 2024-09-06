@@ -99,7 +99,7 @@ function findAndClick() {
 
 const settingsMenu = document.createElement('div');
 settingsMenu.className = 'settings-menu';
-settingsMenu.style.display = 'none';
+settingsMenu.style.display = 'none'; 
 
 const menuTitle = document.createElement('h3');
 menuTitle.className = 'settings-title';
@@ -185,7 +185,7 @@ function toggleAutoSpin() {
 
 function checkAndClickIconButton() {
   const spanElement = document.querySelector('.MuiTypography-root.MuiTypography-bodySmallExtraBoldV2.css-1sz6sja');
-
+  
   if (spanElement && /^(Claim|Клейм|دریافت کنید)$/.test(spanElement.textContent)) {
     const iconButton = document.querySelector('button.MuiButtonBase-root.MuiButton-root.MuiButton-primary.MuiButton-primaryPrimary.MuiButton-sizeLarge.MuiButton-primarySizeLarge.MuiButton-colorPrimary.css-y90z6f');
     if (iconButton) {
@@ -202,7 +202,7 @@ function checkAndClickIconButton() {
 
 function waitForClaimButton() {
   const checkInterval = setInterval(() => {
-    const claimButton = document.querySelector('body > div.MuiDrawer-root.MuiDrawer-modal.MuiModal-root.css-1muh5pq > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorBottom.css-dsgero > div.MuiBox-root.css-6tldie > button');
+    const claimButton = document.querySelector('body > div.MuiDrawer-root.MuiDrawer-modal.MuiModal-root.css-1muh5pq > div.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorBottom.css-dsgero > div.MuiBox-root.css-4q3rnc > button');
     if (claimButton) {
       clearInterval(checkInterval);
       claimButton.click();
@@ -219,9 +219,9 @@ function waitForClaimButton() {
 function clickButton() {
   if (!GAME_SETTINGS.autoSpin) return;
 
-  const button = document.querySelector('.css-bkoiq7');
+  const button = document.querySelector('.css-58bkmv');
   if (button) {
-      ['touchstart', 'touchend'].forEach(eventType =>
+      ['touchstart', 'touchend'].forEach(eventType => 
           button.dispatchEvent(new TouchEvent(eventType, { bubbles: true, cancelable: true, touches: [new Touch({ identifier: 1, target: button })] }))
       );
       button.click();
