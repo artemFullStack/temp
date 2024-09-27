@@ -65,7 +65,7 @@ function findAndClick() {
     return;
   }
 
-  const targetElement = document.querySelector('div[aria-disabled="false"].css-79elbk');
+  const targetElement = Array.from(document.querySelectorAll('div[aria-disabled="false"]')).find(el => el.className.startsWith('css-'));
 
   if (targetElement) {
     function clickWithRandomInterval() {
